@@ -1,0 +1,456 @@
+/* base */
+* {
+    padding: 0;
+    margin: 0;
+    /* 태그별 여백 없앰 */
+    font-family: "맑은 고딕, sans-serif";
+    /* 글꼴 설정 */
+    font-size: 14px;
+    color: #333333;
+    /* 문제지 제시한 색상 지정 */
+}
+
+li {
+    list-style: none;
+}
+
+/* 리스트태그 기호 없앰 */
+a {
+    text-decoration: none;
+}
+
+/* 링크태그의 밑줄 없앰 */
+img {
+    border: none;
+}
+
+/* 이미지에 링크시 생기는 선 없앰 */
+
+/* layout */
+header {
+    width: 1200px;
+    height: 100px;
+    /* header 영역 지정 */
+    margin: 0 auto;
+    /* 창의 가로 가운데 오게 좌우 여백 자동 처리 */
+}
+
+section {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+footer {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+header h1 {
+    float: left;
+    /* 옆에 메뉴가 오도록 수평 처리 - 왼쪽 붙임 */
+    width: 250px;
+    height: 100px;
+    /* 로고 영역 설정 */
+}
+
+.gnb {
+    float: right;
+    /* 오른쪽 붙임 */
+    width: 600px;
+    height: 40px;
+    /* 메뉴 영역 설정 */
+    margin-top: 30px;
+    /* 위쪽 여백 */
+}
+
+.gnb>ul>li {
+    float: left;
+    width: 150px;
+    height: 40px;
+    /* 메인메뉴 한개 영역 설정 */
+    text-align: center;
+    line-height: 40px;
+    /* 글자 가로세로 가운데 설정*/
+    position: relative;
+    /* 하위메뉴 위치 컨트롤 위해 사용 */
+}
+
+.gnb>ul>li:hover .mainNav {
+    /* 메인메뉴 오버시 배경색 글자색 변경 */
+    background-color: #0066ad;
+    color: #fff;
+}
+
+.mainNav {
+    /* 메인메뉴 영역 설정 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subNav {
+    position: absolute;
+    top: 40px;
+    z-index: 5000;
+    /* 메인이미지 슬라이더보다 위쪽에 있도록 깊이 조절 */
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+}
+
+.subNav>li {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    /* 글자 가로 세로 가운데 처리 */
+}
+
+.subNav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+.subNav li a:hover {
+    background-color: #30a3f3;
+    color: #fff;
+    /* 하위메뉴 마우스 오버시 색상 설정 */
+}
+
+.main {
+    width: 1200px;
+    height: 300px;
+    /* 메인이미지 슬라이더 영역 설정 */
+    overflow: hidden;
+    /* 메인에서 넘어가는 사진 안보이게 처리*/
+}
+
+.main ul {
+    width: 1200px;
+    height: 300px;
+    /* 사진 전체 묶음 영역설정 = 메인영역과 같게 처리 */
+    position: relative;
+    /* 사진 한개씩 모두 겹쳐서 놓기 위해 위치 컨트롤 */
+}
+
+.main li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 사진 전체 묶음 영역설정 = 메인영역과 같게 처리 */
+    position: relative;
+    /* 사진 한개씩 모두 겹쳐서 놓기 위해 위치 컨트롤 */
+}
+
+/* 탭바 css */
+.board {
+    /* 공지사항/갤러리 영역 설정 */
+    float: left;
+    /* 왼쪽으로 수평 처리 */
+    width: 400px;
+    height: 200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    /*양쪽 안쪽 여백 설정*/
+}
+
+.board .btn {
+    width: 100%;
+    height: 50px;
+    /* 버튼 전체 영역 설정 */
+    border-bottom: 1px solid #999999;
+    /* 아래 쪽 테두리 설정 */
+}
+
+.board .btn li {
+    float: left;
+    margin: 0 10px;
+    /* 리스트 수평처리 및 좌우 여백 설정*/
+    height: 100%;
+    line-height: 49px;
+}
+
+.board .btn li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*버튼 활성화시 영역 설정 */
+    box-sizing: border-box;
+    /* 테두리 영역으로 인사이드 처리 */
+    font-size: 18px;
+    font-weight: bold;
+    color: #999999;
+}
+
+/* 제이쿼리에서 탭바 활성화시 줄 글자색과 테두리 지정 */
+.board .btn li.on a {
+    color: #222328;
+    border-bottom: 3px solid #222328;
+}
+
+.board .btn .first {
+    margin-left: 0;
+}
+
+/* 첫번째 요소 왼쪽 여백 없으매 */
+.board .bWrap {
+    width: 100%;
+    height: 150px;
+}
+
+/*컨텐츠 요소 영역*/
+
+/* 공지사항과 갤러리 안보이게 처리 후 제어쿼리에서 보이게 처리 */
+.bWrap>div {
+    display: none;
+}
+
+/* 공지사항 */
+.notice {
+    width: 100%;
+    height: 150px;
+    /* 공지사항 영역 설정 */
+}
+
+.notice li {
+    width: 100%;
+    height: 30px;
+    /* 리스트 한개당 영역 설정 */
+    line-height: 30px;
+    font-size: 13px;
+    /* 세로 가운데 처리 및 글자크기 설정*/
+}
+
+.notice li a {
+    float: left;
+    display: block;
+    width: 290px;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.notice li .date {
+    float: right;
+    /* 글자는 왼쪽에 붙이고 날짜를 오른쪽에 붙이기 위해 사용 */
+    display: block;
+    width: 70px;
+    height: 30px;
+    /* 날짜 부분 영역 설정 */
+    padding-right: 10px;
+    box-sizing: border-box;
+    /* 안쪽 여백 설정 */
+    font-size: 12px;
+    text-align: right;
+    /* 글자 크기 및 가로 오른쪽 정렬 */
+}
+
+/* 갤러리 css */
+.gallery {
+    width: 100%;
+    height: 150px;
+    /*갤러리 영역 설정 */
+}
+
+.gallery ul {
+    padding: 25px 0;
+}
+
+/* 이미지 전체 위아래 여백 설정 */
+.gallery li {
+    float: left;
+    /* 각각의 이미지 왼쪽으로 수평나열 처리 */
+    width: 100px;
+    height: 100px;
+    /* 이미지 영역 설정 */
+    margin: 0 10px;
+    /* 각각의 이미지 좌우 여백 설정 */
+}
+
+.idlogin {
+    width: 400px;
+    height: 200px;
+    /* 배너 영역 설정 */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /*양쪽 안쪽 여백 설정*/
+    box-sizing: border-box;
+    /* 사이즈가 커지지 않게 패딩 인사이드 처리 */
+    float: left;
+    /* 왼쪽으로 수평 처리 */
+    background-color: #c3dce7;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.idlogin fieldset label {
+    width: 80px;
+    height: 20px;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-flex;
+}
+
+.idlogin legend {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.idlogin div.button {
+    margin: 10px;
+    text-align: center;
+
+}
+
+.idlogin div.button input {
+    margin-left: 20px;
+}
+
+.idlogin form#join {
+    text-align: center;
+}
+
+.idlogin label#line {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+        url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+al-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.reservation {
+    float: left;
+    /* 왼쪽으로 수평 처리 */
+    width: 400px;
+    height: 200px;
+    /* 온라인예약 영역 설정 */
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+.reservation ul {
+    margin: 20px;
+    border: solid 1px #ef8914;
+}
+
+.reservation li {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.reservation li h1 {
+    font-size: 20px;
+    margin: 20px 50px 20px;
+    background-color: orange;
+    line-height: 60px;
+    border-style: solid 2px #ef8914;
+}
+
+.reservation b {
+    color: red;
+}
+
+footer h1 {
+    float: left;
+    /* 왼쪽으로 수평 처리 */
+    width: 250px;
+    height: 100px;
+    /* 하단로고 영역 설정 */
+}
+
+.fNav {
+    float: left;
+    /* 왼쪽으로 수평 처리 */
+    width: 950px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /* 글자 가로 세로 가운데 정렬 */
+}
+
+.fNav li {
+    display: inline-block;
+    /* 리스트가 아래로 처리된 것을 한줄 처리 */
+    padding-right: 10px;
+    /* 오른쪽 여백 설정 */
+}
+
+.fNav li::after {
+    /* 테두리를 넣기 위해 설정*/
+    content: '|';
+    /* 파이프문자로 작성 */
+    position: relative;
+    /* 라인을 상대적 이동 처리 */
+    left: 7px;
+    top: -2px;
+    /* 라인 위치 조정 */
+}
+
+.fNav .last {
+    padding-right: 0;
+}
+
+/* 마지막 리스트의 오른쪽 여백 없앰 */
+.fNav .last::after {
+    content: '';
+}
+
+/* 마지막 리스트의 라인 없앰 */
+footer p {
+    float: left;
+    /* 왼쪽으로 수평 처리 */
+    width: 950px;
+    height: 50px;
+    line-height: 20px;
+    text-align: center;
+    /* 글자 가로 세로 가운데 정렬 */
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>천문대 홈페이지</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/common.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="#">
+                <img src="images/header_logo.jpg " alt="로고">
+            </a>
+        </h1> <!-- 상단로고 -->
+        <nav class="gnb">
+            <ul>
+                <li>
+                    <a href="#" class="mainNav">김해천문대</a>
+                    <ul class="subNav">
+                        <li><a href="#">천문대소개</a></li>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="mainNav">이용안내</a>
+                    <ul class="subNav">
+                        <li><a href="#">프로그램</a></li>
+                        <li><a href="#">관람시간표</a></li>
+                        <li><a href="#">이달의 별자리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="mainNav">천문대예약</a>
+                    <ul class="subNav">
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인</a></li>
+                        <li><a href="#">예약취소</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="mainNav">커뮤니티</a>
+                    <ul class="subNav">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">방문후기</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav> <!-- 메뉴 -->
+    </header> <!-- 홈페이지 상단 -->
+
+    <section>
+        <!-- 메인이미지+공지사항/ 갤러리+배너+바로가기 -->
+        <div class="main">
+            <!-- 메인이미지슬라이더 -->
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/main01.jpg" alt="main이미지01">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/main02.jpg" alt="main이미지02">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/main03.jpg" alt="main이미지03">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="board">
+            <!--(탭바전체) 공지사항/갤러리 -->
+            <ul class="btn">
+                <!-- 버튼-->
+                <li class="first"><a href="#tab01">공지사항</a></li>
+                <li><a href="#tab02">갤러리</a></li>
+            </ul>
+            <div class="bWrap">
+                <!-- 컨텐츠-->
+                <div class="notice">
+                    <ul>
+                        <li>
+                            <a href="#">· 정월대보름 달사진 콘테스트 심사 결과발표</a>
+                            <span class="date">2022.05.01.</span>
+                        </li>
+                        <li>
+                            <a href="#">· 달과 함께 사진을 (달사진 콘테스트 매월 진행)</a>
+                            <span class="date">2022.03.20.</span>
+                        </li>
+                        <li>
+                            <a href="#">· 20대 대통령 선거 관련 휴관안내</a>
+                            <span class="date">2022.03.07.</span>
+                        </li>
+                        <li>
+                            <a href="#">· 설 연휴 휴관안내</a>
+                            <span class="date">2022.01.28.</span>
+                        </li>
+                        <li>
+                            <a href="#">· 코로나 방역수칙 관련 기관방문 안내</a>
+                            <span class="date">2022.01.01.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/gallery01.jpg" alt="갤러리이미지01">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/gallery02.png" alt="갤러리이미지02">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/gallery03.jpg" alt="갤러리이미지03">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="idlogin">
+            <!-- 로그인 -->
+            <form action="" id="login">
+                <fieldset>
+                    <legend>ID 로그인</legend>
+                    <label id="id">아이디</label>
+                    <input type="text" name="id" autofocus required placeholder="아이디를 입력하세요"><br>
+                    <label id="passwd">비밀번호</label>
+                    <input type="password" name="passwd" required placeholder="비밀번호를 입력하세요"><br>
+                    <div class="button">
+                        <input type="button" name="button1" value="로그인">
+                        <input type="button" name="button2" value="회원가입">
+                    </div>
+                </fieldset>
+            </form>
+            <form action="" id="join">
+                <label id="findid" name="findid">아이디찾기</label>
+                <label id="line" name="line">|</label>
+                <label id="findpasswd" name="findpasswd">비밀번호찾기</label>
+            </form>
+        </div>
+        <div class="reservation">
+            <!-- 온라인예약 -->
+            <ul>
+                <li><a href="#">
+                        <h1>천문대 온라인 예약 <span class="material-icons">check_circle</span>
+                        </h1>
+                    </a></li>
+                <li>
+                    <p>홈페이지를 통한 온라인 예약만 가능하며<br><b>당일예약 및 전화예약은 불가</b>함을 알려드립니다.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <h1>
+            <a href="#">
+                <img src="images/footer_logo.jpg" alt="로고">
+            </a>
+        </h1> <!-- 하단로고 -->
+        <nav class="fNav">
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+                <li class="last"><a href="#">RSS</a></li>
+            </ul>
+        </nav> <!-- 하단메뉴 -->
+        <p>
+            Copyright ⓒ SunyoungCorp. All rights reserved.<br>
+            Contact mail: kimna1leeshin@naver.com Tel: 051)123-4567 Fax: 051)123-4568
+        </p> <!-- 카피라이트 -->
+    </footer> <!-- 홈페이지 하단 -->
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+/* base */
+* {
+    padding: 0;
+    margin: 0;      /* 태그별 여백 없앰 */
+    font-family: "맑은 고딕, sans-serif";       /* 글꼴 설정 */
+    font-size: 14px;
+    color: #333333;     /* 문제지 제시한 색상 지정 */
+}
+li {
+    list-style: none;
+}       /* 리스트태그 기호 없앰 */
+a {
+    text-decoration: none;
+}       /* 링크태그의 밑줄 없앰 */
+img {
+    border: none;
+}
+
+section {
+    width: 1200px; height: 700px; 
+}
+
+div.main {
+    width: 100%; height: 200px; 
+}
+nav#sub_menu {
+    width: 160px; height: 500px; 
+    float: left;
+	margin: 10px;
+	padding: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+nav#sub_menu ul {
+    font-size: 16px;
+    color: gray;
+}
+nav#sub_menu ul li a {
+    font-size: 16px;
+    margin: 20px; 
+    color: gray;
+    background-image: linear-gradient(
+        transparent 0%,
+        transparent 80%, 
+        gray 90%, 
+        gray 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+
+    transition: background-size 300ms;
+}
+nav#sub_menu ul li a:hover {
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+article {
+    width: 980px; height: 100%;
+    margin-left: 10px;
+    float: left;
+}
+article h1 {
+    font-size: 20px;
+    margin: 20px 10px 20px 10px; 
+}
+table#board {
+    margin-bottom: 30px;
+    border : 1px solid gray;
+    border-collapse: collapse;
+}
+tr, td, th {
+    text-align: center;
+    border: 1px solid gray;
+}
+th.no {
+    width: 40px; height: 40px; 
+}
+td {
+    height: 40px;
+}
+th.title {
+    width: 500px;
+}
+th.write {
+    width: 120px; 
+}
+th.date {
+    width: 120px; 
+}
+th.read {
+    width: 80px; 
+}
+div#table_search {
+    width: 850px;
+    margin: 10px; 
+    display: block;
+    text-align: right;
+}
+div#table_search > input.btn {
+    width: 75px;
+}
+div#table_search > input.input_box {
+    width: 200px; 
+}
+
+form {
+    width: 866px; height: 70px; 
+    line-height: 160%;
+}
+div#page_control {
+    margin: 10px;
+    display: block;
+    font-size: 15px; 
+    text-align: center;
+}
+div#page_control > a {
+    margin: 12px; 
+    font-weight: bold;
+}
